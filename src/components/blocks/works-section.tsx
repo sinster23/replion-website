@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Instagram, Sparkles, Coffee } from "lucide-react";
 
+
 // Simplified scroll progress hook
 function useScrollProgress(containerRef: React.RefObject<HTMLDivElement | null>) {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -202,7 +203,7 @@ export default function HowItWorksSection() {
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center border-2 border-gray-200 dark:border-white/10">
                 <div className="h-6 w-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                  <item.icon className="w-3 h-3 text-white" />
+                  {React.createElement(item.icon, { className: "w-3 h-3 text-white" })}
                 </div>
               </div>
               <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500">
@@ -225,7 +226,7 @@ export default function HowItWorksSection() {
                 <div className="relative flex flex-col space-y-3 mb-4">
                   <div className="flex items-center justify-between">
                     <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-black/5 dark:bg-white/10 group-hover:bg-gradient-to-br transition-all duration-300">
-                      <item.icon className="w-5 h-5 text-foreground" />
+                      {React.createElement(item.icon, { className: "w-5 h-5 text-foreground" })}
                     </div>
                     <span className="text-3xl font-bold text-gray-300 dark:text-gray-700">
                       {item.number}
