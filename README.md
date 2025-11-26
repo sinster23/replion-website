@@ -19,6 +19,7 @@ This repository contains the **frontend codebase** built with a clean, scalable 
 
 ## 📂 Project Structure
 
+```
 src/
 ├── app/
 │ ├── layout.tsx
@@ -34,7 +35,7 @@ src/
 ├── styles/
 ├── public/
 └── types/
-
+```
 
 ---
 
