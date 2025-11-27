@@ -23,7 +23,7 @@ export default function DashboardShell({ children }: DashboardShellProps) {
   const [user, setUser] = useState<User | null>(null);
   const router = useRouter();
   
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+  const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
 
   // Check authentication status
   useEffect(() => {
@@ -40,7 +40,7 @@ export default function DashboardShell({ children }: DashboardShellProps) {
             setUser(data.data.user);
           } else {
             // Not authenticated
-            router.push('/login');
+            router.push('/register');
           }
         } else {
           // Auth failed, redirect to login
